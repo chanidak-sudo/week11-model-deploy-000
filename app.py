@@ -142,7 +142,8 @@ uploaded_file = st.file_uploader(
 
 # แสดงตัวอย่างภาพที่อัปโหลด
 if uploaded_file is not None:
-    st.image(uploaded_file, caption="ภาพที่อัปโหลด", use_container_width=True)
+    # หมายเหตุ: streamlit 1.38.0 ใช้ use_column_width (ไม่ใช่ use_container_width)
+    st.image(uploaded_file, caption="ภาพที่อัปโหลด", use_column_width=True)
 
 # --- ปุ่มทำนายผล ---
 if st.button("ทำนายผล"):
