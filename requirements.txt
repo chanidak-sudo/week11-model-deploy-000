@@ -1,0 +1,11 @@
+# ไลบรารีสำหรับเว็บแอปจำแนกโรค Covid-19 จากภาพ X-ray
+# หมายเหตุ: โมเดล .pkcls เป็นโมเดลของ Orange จึงต้องติดตั้ง Orange + ตัวฝังภาพ
+streamlit==1.38.0
+Orange3==3.40.0                 # ใช้โหลดโมเดล .pkcls และทำนาย
+orange3-imageanalytics==0.13.0  # ตัวฝังภาพ Inception v3 (image embedding 2048 มิติ)
+PyQt5==5.15.11                  # จำเป็นสำหรับ orange3-imageanalytics
+numpy==2.3.5
+pandas==2.2.2
+joblib==1.5.3                   # ใช้โหลดไฟล์โมเดล
+Pillow==12.1.1                  # ใช้อ่าน/แสดงไฟล์ภาพ
+scikit-learn==1.8.0             # Orange เรียกใช้ภายใน (เวอร์ชันนี้ทดสอบแล้วโหลดโมเดลได้)
